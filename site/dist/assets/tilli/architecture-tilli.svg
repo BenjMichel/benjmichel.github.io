@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+<title id="title">Architecture globale de Tilli</title>
+<desc id="desc">Six interfaces sont reliées à une API Node.js commune : site client React, plugin e-commerce Shopify ou JavaScript natif, plateforme vendeurs React, application artisan React Native, plateforme atelier React et administration React. Tilli Core partage du code JavaScript entre les projets. L’API gère les commandes, le matching, les partenaires, les paiements et la facturation. Les données MongoDB passent par un ETL interne vers MySQL puis Metabase. L’API se connecte également à Mangopay, Refashion, aux services e-mail et SMS et aux accès partenaires FTP et API. Vue simplifiée de l’architecture historique documentée en novembre 2025.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#acc5ff"/></marker>
+<style>text{font-family:Arial,sans-serif;fill:#f4f2ea}.muted{fill:#b4bfd1;font-size:18px}.label{font-size:22px;font-weight:bold}.tech{fill:#acc5ff;font-size:18px}.node{fill:#101e37;stroke:#465976;stroke-width:1.5}.flow{fill:none;stroke:#acc5ff;stroke-width:2;marker-end:url(#arrow)}.bus{fill:none;stroke:#acc5ff;stroke-width:2}</style></defs>
+<rect width="1440" height="1040" rx="16" fill="#050d20"/>
+<text x="56" y="76" font-size="40" font-weight="bold">Tilli — une API, plusieurs produits</text>
+<text x="56" y="114" class="muted">Vue simplifiée de l’architecture historique · novembre 2025</text>
+<g transform="translate(56 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="43" class="label">Site client</text><text x="20" y="79" class="tech">React</text></g>
+<g transform="translate(280 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="39" class="label">Plugin</text><text x="20" y="65" class="label">e-commerce</text><text x="20" y="94" class="tech">Shopify / JS natif</text></g>
+<g transform="translate(504 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="39" class="label">Plateforme</text><text x="20" y="65" class="label">vendeurs</text><text x="20" y="94" class="tech">React</text></g>
+<g transform="translate(728 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="43" class="label">App artisan</text><text x="20" y="79" class="tech">React Native</text></g>
+<g transform="translate(952 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="39" class="label">Plateforme</text><text x="20" y="65" class="label">atelier</text><text x="20" y="94" class="tech">React</text></g>
+<g transform="translate(1176 168)"><rect class="node" width="208" height="114" rx="8"/><text x="20" y="43" class="label">Administration</text><text x="20" y="79" class="tech">React</text></g>
+<path d="M160 282V324H1280V282M384 282V324M608 282V324M832 282V324M1056 282V324" class="bus"/>
+<path d="M720 324V410" class="flow"/>
+<rect x="56" y="348" width="555" height="39" rx="4" fill="#172d50"/><text x="74" y="374" font-size="18">Tilli Core · code JavaScript partagé entre les projets</text>
+<rect x="56" y="412" width="1328" height="135" rx="10" fill="#acc5ff"/>
+<text x="86" y="456" font-size="30" font-weight="bold" style="fill:#07152b">API Tilli · Node.js</text>
+<text x="86" y="495" font-size="21" style="fill:#07152b">Commandes et suivi · matching artisans · paramétrage partenaires</text>
+<text x="86" y="526" font-size="21" style="fill:#07152b">Paiements et facturation · Bonus Réparation · communications e-mail et SMS</text>
+<path d="M160 547V648" class="flow"/><path d="M1180 547V648" class="flow"/>
+
+<g transform="translate(56 650)"><rect class="node" width="208" height="116" rx="8"/><text x="20" y="42" class="label">MongoDB</text><text x="20" y="76" class="muted">Données</text><text x="20" y="100" class="muted">opérationnelles</text></g>
+<path d="M264 708H299" class="flow"/>
+<g transform="translate(304 650)"><rect class="node" width="174" height="116" rx="8"/><text x="20" y="42" class="label">ETL interne</text><text x="20" y="76" class="muted">Transformation</text><text x="20" y="100" class="muted">et synchro</text></g>
+<path d="M478 708H513" class="flow"/>
+<g transform="translate(518 650)"><rect class="node" width="174" height="116" rx="8"/><text x="20" y="42" class="label">MySQL</text><text x="20" y="76" class="muted">Données pour</text><text x="20" y="100" class="muted">l’analyse</text></g>
+<path d="M692 708H727" class="flow"/>
+<g transform="translate(732 650)"><rect class="node" width="208" height="116" rx="8"/><text x="20" y="42" class="label">Metabase</text><text x="20" y="76" class="muted">Questions et</text><text x="20" y="100" class="muted">tableaux de bord</text></g>
+<rect x="1000" y="650" width="384" height="278" rx="8" class="node"/>
+<text x="1024" y="690" class="label">Mangopay</text><text x="1024" y="718" class="muted">Paiements et flux financiers</text>
+<text x="1024" y="759" class="label">Refashion</text><text x="1024" y="787" class="muted">Déclarations du Bonus Réparation</text>
+<text x="1024" y="828" class="label">E-mail / SMS</text><text x="1024" y="856" class="muted">Communications transactionnelles</text>
+<text x="1024" y="902" class="tech">Accès partenaires · FTP / API</text>
+<text x="56" y="827" font-size="23">Du parcours client au travail de l’artisan,</text><text x="56" y="861" font-size="23">un socle commun pour relier les opérations.</text>
+<line x1="56" y1="970" x2="1384" y2="970" stroke="#334057"/>
+<text x="56" y="1007" font-size="17" fill="#b4bfd1">Synthèse du deck de passation Tilli · schéma fonctionnel, sans détail d’infrastructure ni donnée personnelle</text>
+</svg>

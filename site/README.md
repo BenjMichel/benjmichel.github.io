@@ -31,6 +31,10 @@ Le portrait et le logo fournis par Benjamin sont copiés sans retouche dans `dis
 
 Les images originales sont préservées. Les filtres SVG `logo-alpha` et `hydra-alpha` définis dans la page convertissent leurs fonds respectivement clair et sombre en transparence au rendu ; la couleur du logo reste bleu marine et l’hydre est teintée bleu stellaire. Les essais imagegen ont produit des fonds à damier opaques et ne sont pas utilisés dans le site.
 
+## Étude de cas Tilli
+
+La rubrique « Projets réalisés » reprend le contenu et les huit visuels fournis dans `portfolio-tilli-contenu/apercu.html`. Les fichiers sont conservés dans `dist/assets/tilli/`, avec des liens vers leur version en grand. L’architecture représente l’écosystème historique de novembre 2025 ; les maquettes web et la capture locale sont identifiées dans leurs légendes. L’écran de mission fourni masque les données personnelles. Le schéma des paiements est accessible dans un volet repliable sur fond blanc.
+
 ## Publication GitHub Pages
 
 Les sources sont conservées dans le dépôt public `BenjMichel/benjmichel.github.io`. Le workflow `.github/workflows/pages.yml` publie directement le contenu de `site/dist/` sur https://benjmichel.github.io/ après chaque push sur `main`. Aucune compilation n’est nécessaire.

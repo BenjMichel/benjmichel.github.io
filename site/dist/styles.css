@@ -17,3 +17,35 @@
 @media(max-width:700px){.hero-composition{grid-template-columns:1fr;gap:32px;padding:0 0 14px}.portrait-orbit{width:230px;margin:20px 24px;justify-self:center}.portrait-orbit::before{inset:-16px}.orbit-star{font-size:34px}.hero::before{background-size:300% auto;opacity:.55}.company-note{gap:16px;align-items:flex-start}.company-note img{width:68px;height:68px}.experience::before{width:440px;height:440px;left:-160px;bottom:-60px}}
 
 .image-filters{position:absolute;overflow:hidden;pointer-events:none}
+
+/* Tilli case study: complete historic screens, with links to full-size images. */
+.tilli-case{padding-bottom:0}
+.tilli-case>p{max-width:780px;color:var(--muted);margin:0 0 20px;font-size:18px}
+.tilli-case strong{color:var(--ink);font-weight:550}
+.tilli-case .tilli-role{font-size:15px;margin-bottom:28px}
+.tilli-case h3{max-width:780px;font-weight:500;font-size:clamp(25px,3vw,36px);line-height:1.25;letter-spacing:-.035em;margin:60px 0 22px}
+.tilli-case figure{margin:32px 0;min-width:0}
+.tilli-case figure a{display:block}
+.tilli-case img{display:block;max-width:100%;height:auto}
+.tilli-case figcaption{font-size:14px;line-height:1.6;color:var(--muted);margin-top:14px;max-width:80ch}
+.tilli-case .architecture img{width:100%}
+.tilli-case .web-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;align-items:start;margin:32px 0}
+.tilli-case .web-screens figure{margin:0}
+.tilli-case .web-screens figure:first-child{grid-column:1/-1}
+.tilli-case .web-screens img{width:100%}
+.tilli-case .web-screens figure:nth-child(2) img{max-width:588px}
+.tilli-case .screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;align-items:start;margin:36px 0}
+.tilli-case .screens figure{margin:0}
+.tilli-case .screens img{width:auto;max-height:550px;margin:0 auto}
+.tilli-case .screens figcaption{max-width:290px;margin:16px auto 0}
+.tilli-case details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-top:36px}
+.tilli-case summary{cursor:pointer;color:var(--accent)}
+.tilli-case summary:focus-visible{outline:3px solid var(--accent);outline-offset:6px}
+.tilli-case .payments{background:#fff;padding:20px;width:100%}
+@media(max-width:700px){
+  .tilli-case>p{font-size:16px}
+  .tilli-case h3{margin-top:42px}
+  .tilli-case .web-screens,.tilli-case .screens{grid-template-columns:1fr;gap:32px}
+  .tilli-case .web-screens figure:first-child{grid-column:auto}
+  .tilli-case .screens figure{width:100%;max-width:300px;margin:0 auto}
+}
