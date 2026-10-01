@@ -34,10 +34,11 @@
 .tilli-case .web-screens figure:first-child{grid-column:1/-1}
 .tilli-case .web-screens img{width:100%}
 .tilli-case .web-screens figure:nth-child(2) img{max-width:588px}
-.tilli-case .screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;align-items:start;margin:36px 0}
+.tilli-case .screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;align-items:start;max-width:912px;margin:36px auto}
 .tilli-case .screens figure{margin:0}
-.tilli-case .screens img{width:auto;max-height:550px;margin:0 auto}
-.tilli-case .screens figcaption{max-width:290px;margin:16px auto 0}
+.tilli-case .screens img{width:100%;height:auto;margin:0}
+.tilli-case .screens figcaption{margin:16px 0 0}
+.tilli-case .screens-note{font-size:14px;margin-top:-12px}
 .tilli-case details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;margin-top:36px}
 .tilli-case summary{cursor:pointer;color:var(--accent)}
 .tilli-case summary:focus-visible{outline:3px solid var(--accent);outline-offset:6px}

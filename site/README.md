@@ -33,7 +33,7 @@ Les images originales sont préservées. Les filtres SVG `logo-alpha` et `hydra-
 
 ## Expérience professionnelle chez Tilli
 
-La rubrique « Expérience professionnelle », distincte des projets open source, reprend le contenu et les huit visuels fournis dans `portfolio-tilli-contenu/apercu.html`. Les fichiers sont conservés dans `dist/assets/tilli/`, avec des liens vers leur version en grand. L’architecture représente l’écosystème historique de novembre 2025 ; les maquettes web et la capture locale sont identifiées dans leurs légendes. L’écran de mission fourni masque les données personnelles. Le schéma des paiements est accessible dans un volet repliable sur fond blanc.
+La rubrique « Expérience professionnelle », distincte des projets open source, reprend le contenu et les huit visuels fournis dans `portfolio-tilli-contenu/apercu.html`. Les fichiers sont conservés dans `dist/assets/tilli/`, avec des liens vers leur version en grand. L’architecture représente l’écosystème historique de novembre 2025 ; les maquettes web et la capture locale sont identifiées dans leurs légendes. Les trois visuels App Store présentent le profil, l’agenda et le récapitulatif des missions, avec les données personnelles masquées. Le schéma des paiements est accessible dans un volet repliable sur fond blanc.
 
 ## Publication GitHub Pages
 
