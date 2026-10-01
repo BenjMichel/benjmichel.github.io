@@ -33,6 +33,6 @@ Les images originales sont préservées. Les filtres SVG `logo-alpha` et `hydra-
 
 ## Publication GitHub Pages
 
-Les sources sont conservées dans le dépôt privé `BenjMichel/portfolio`. Le contenu de `dist/` est publié à la racine du dépôt `BenjMichel/BenjMichel.github.io`, sur sa branche `master`. GitHub Pages déploie cette branche automatiquement après chaque push. Le fichier `.nojekyll` évite une compilation Jekyll inutile.
+Les sources sont conservées dans le dépôt public `BenjMichel/benjmichel.github.io`. Le workflow `.github/workflows/pages.yml` publie directement le contenu de `site/dist/` sur https://benjmichel.github.io/ après chaque push sur `main`. Aucune compilation n’est nécessaire.
 
-Pour une mise à jour, reporter les fichiers modifiés de `site/dist/` dans un clone à jour du dépôt public, puis committer et pousser sur `master`. Ne pas synchroniser avec suppression : les autres fichiers historiques du dépôt sont préservés. La configuration `.openai/` correspond à un ancien essai d’hébergement et n’est ni versionnée ni publiée.
+Pour une mise à jour, modifier les fichiers de `site/dist/`, puis committer et pousser sur `main`. Le déploiement est visible dans l’onglet Actions du dépôt et peut aussi être relancé manuellement. L’ancien dépôt de publication est archivé sous `BenjMichel/tilli-site-old`. La configuration `.openai/` correspond à un ancien essai d’hébergement et n’est ni versionnée ni publiée.
