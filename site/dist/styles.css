@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Instrument+Serif:ital@0;1&display=swap');
+/* Polices auto-hébergées (sous-ensemble latin, licence OFL). DM Sans est variable. */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/dm-sans-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/instrument-serif-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/instrument-serif-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* Palette Alphard : bleu nuit, ivoire, bleu stellaire et ardoise. */
 :root {
@@ -181,6 +207,11 @@ nav a:hover, .text-link:hover, .footer a:hover {
   top: 15px;
 }
 
+/* Le <picture> ne crée pas de boîte : l'image reste mise en page comme avant. */
+picture {
+  display: contents;
+}
+
 /* Filtres SVG qui rendent transparents les fonds du logo et de l'hydre. */
 .image-filters {
   position: absolute;
@@ -253,7 +284,8 @@ nav {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: url('assets/alphard-banner.png') left top / 300% auto no-repeat;
+  background: url('assets/hero-stars.webp') left top / 100% auto no-repeat;
+  background-image: image-set(url('assets/hero-stars.avif') type('image/avif'), url('assets/hero-stars.webp') type('image/webp'));
   opacity: .42;
   mask-image: linear-gradient(to bottom, transparent, #000 15%, #000 75%, transparent);
 }
@@ -442,7 +474,8 @@ h1 .serif {
   bottom: -150px;
   width: 570px;
   height: 570px;
-  background: url('assets/alphard-hydra.png') center / contain no-repeat;
+  background: url('assets/hydra-600.webp') center / contain no-repeat;
+  background-image: image-set(url('assets/hydra-600.avif') type('image/avif'), url('assets/hydra-600.webp') type('image/webp'));
   opacity: .09;
   filter: url(#hydra-alpha);
   z-index: -1;

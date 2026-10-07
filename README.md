@@ -21,5 +21,6 @@ Ouvrir ensuite [localhost:4173](http://localhost:4173).
 - `site/dist/index.html` : contenu de la page.
 - `site/dist/styles.css` : styles, organisés dans l'ordre des sections de la page.
 - `site/dist/assets/` : images publiées (identité Alphard, portrait, visuels Tilli).
+- `site/sources/` : originaux des images, non publiés ; `scripts/optimize-images.sh` en génère les variantes AVIF et WebP.
 
 L'identité visuelle, les choix techniques et la publication sont détaillés dans [site/README.md](site/README.md).

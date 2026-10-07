@@ -10,7 +10,15 @@
   <meta property="og:description" content="Du premier commit au produit qui grandit. Développement web, mobile et accompagnement technique.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://benjmichel.github.io/">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://benjmichel.github.io/assets/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Benjamin Michel, développeur fullstack freelance : du premier commit au produit qui grandit.">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://benjmichel.github.io/">
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23050d20'/%3E%3Ctext x='5' y='28' font-family='Arial' font-size='23' font-weight='bold' fill='%23acc5ff'%3Ebm%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -53,7 +61,10 @@
           <p class="hero-signature">Le sens du produit. Le souci du détail.</p>
         </div>
         <div class="portrait-orbit">
-          <img class="portrait" src="assets/benjamin-michel.jpg" width="1245" height="1244" alt="Benjamin Michel" fetchpriority="high">
+          <picture>
+            <source type="image/avif" srcset="assets/portrait-350.avif 350w, assets/portrait-700.avif 700w" sizes="(max-width: 700px) 230px, (max-width: 1000px) 290px, 350px">
+            <img class="portrait" src="assets/portrait-700.jpg" srcset="assets/portrait-350.webp 350w, assets/portrait-700.webp 700w" sizes="(max-width: 700px) 230px, (max-width: 1000px) 290px, 350px" width="700" height="700" fetchpriority="high" alt="Benjamin Michel">
+          </picture>
           <span class="orbit-star" aria-hidden="true">✦</span>
         </div>
       </div>
@@ -142,15 +153,24 @@
       <p>Le parcours e-commerce permettait de préciser un besoin de retouche depuis un site partenaire. L’offre colis étendait le service à la réparation à distance, avec un choix guidé des prestations. Ces visuels historiques illustrent le site et la conception de ces parcours.</p>
       <div class="web-screens">
         <figure>
-          <a href="assets/tilli/tilli-site-partenaires.png"><img src="assets/tilli/tilli-site-partenaires.png" width="1600" height="900" loading="lazy" alt="Page web Tilli destinée aux partenaires, avec le visuel Join the Cycle et les bénéfices du service."></a>
+          <a href="assets/tilli/tilli-site-partenaires-1600.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-site-partenaires-800.avif 800w, assets/tilli/tilli-site-partenaires-1600.avif 1600w" sizes="(max-width: 1440px) 90vw, 1264px">
+            <img src="assets/tilli/tilli-site-partenaires-800.webp" srcset="assets/tilli/tilli-site-partenaires-800.webp 800w, assets/tilli/tilli-site-partenaires-1600.webp 1600w" sizes="(max-width: 1440px) 90vw, 1264px" width="1600" height="900" loading="lazy" alt="Page web Tilli destinée aux partenaires, avec le visuel Join the Cycle et les bénéfices du service.">
+          </picture></a>
           <figcaption>Site partenaires — capture d’une version locale du site.</figcaption>
         </figure>
         <figure>
-          <a href="assets/tilli/tilli-plugin-ecommerce.png"><img src="assets/tilli/tilli-plugin-ecommerce.png" width="588" height="614" loading="lazy" alt="Formulaire de demande de retouche : choix du vêtement, de la matière et du besoin."></a>
+          <a href="assets/tilli/tilli-plugin-ecommerce-588.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-plugin-ecommerce-588.avif 588w">
+            <img src="assets/tilli/tilli-plugin-ecommerce-588.webp" srcset="assets/tilli/tilli-plugin-ecommerce-588.webp 588w" width="588" height="614" loading="lazy" alt="Formulaire de demande de retouche : choix du vêtement, de la matière et du besoin.">
+          </picture></a>
           <figcaption>Plugin e-commerce — maquette du formulaire de demande de retouche, présentée dans le dossier CII.</figcaption>
         </figure>
         <figure>
-          <a href="assets/tilli/tilli-parcours-colis.png"><img src="assets/tilli/tilli-parcours-colis.png" width="1134" height="1096" loading="lazy" alt="Parcours web de réparation par colis avec choix entre remaillage, raccommodage, coudière ou option créative."></a>
+          <a href="assets/tilli/tilli-parcours-colis-1134.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-parcours-colis-600.avif 600w, assets/tilli/tilli-parcours-colis-1134.avif 1134w" sizes="(max-width: 700px) 90vw, 45vw">
+            <img src="assets/tilli/tilli-parcours-colis-600.webp" srcset="assets/tilli/tilli-parcours-colis-600.webp 600w, assets/tilli/tilli-parcours-colis-1134.webp 1134w" sizes="(max-width: 700px) 90vw, 45vw" width="1134" height="1096" loading="lazy" alt="Parcours web de réparation par colis avec choix entre remaillage, raccommodage, coudière ou option créative.">
+          </picture></a>
           <figcaption>Offre colis — maquette du choix de réparation, présentée dans le dossier CII.</figcaption>
         </figure>
       </div>
@@ -159,15 +179,24 @@
       <p>Sur iOS et Android, l’application réunissait les demandes de mission, l’agenda, le suivi des commandes et les informations de rémunération. Les visuels App Store ci-dessous présentent trois usages : personnaliser son profil, organiser ses rendez-vous et consulter le récapitulatif de ses missions.</p>
       <div class="screens">
         <figure>
-          <a href="assets/tilli/tilli-appstore-profil.png"><img loading="lazy" src="assets/tilli/tilli-appstore-profil.png" width="852" height="1846" alt="Visuel App Store : profil artisan paramétrable, nom masqué."></a>
+          <a href="assets/tilli/tilli-appstore-profil-852.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-appstore-profil-300.avif 300w, assets/tilli/tilli-appstore-profil-600.avif 600w, assets/tilli/tilli-appstore-profil-852.avif 852w" sizes="(max-width: 700px) 300px, 280px">
+            <img src="assets/tilli/tilli-appstore-profil-300.webp" srcset="assets/tilli/tilli-appstore-profil-300.webp 300w, assets/tilli/tilli-appstore-profil-600.webp 600w, assets/tilli/tilli-appstore-profil-852.webp 852w" sizes="(max-width: 700px) 300px, 280px" width="852" height="1846" loading="lazy" alt="Visuel App Store : profil artisan paramétrable, nom masqué.">
+          </picture></a>
           <figcaption>Personnaliser son profil et ses savoir-faire.</figcaption>
         </figure>
         <figure>
-          <a href="assets/tilli/tilli-appstore-agenda.png"><img loading="lazy" src="assets/tilli/tilli-appstore-agenda.png" width="852" height="1846" alt="Visuel App Store : agenda artisan, nom et adresse masqués."></a>
+          <a href="assets/tilli/tilli-appstore-agenda-852.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-appstore-agenda-300.avif 300w, assets/tilli/tilli-appstore-agenda-600.avif 600w, assets/tilli/tilli-appstore-agenda-852.avif 852w" sizes="(max-width: 700px) 300px, 280px">
+            <img src="assets/tilli/tilli-appstore-agenda-300.webp" srcset="assets/tilli/tilli-appstore-agenda-300.webp 300w, assets/tilli/tilli-appstore-agenda-600.webp 600w, assets/tilli/tilli-appstore-agenda-852.webp 852w" sizes="(max-width: 700px) 300px, 280px" width="852" height="1846" loading="lazy" alt="Visuel App Store : agenda artisan, nom et adresse masqués.">
+          </picture></a>
           <figcaption>Organiser ses rendez-vous dans l’agenda.</figcaption>
         </figure>
         <figure>
-          <a href="assets/tilli/tilli-appstore-missions.png"><img loading="lazy" src="assets/tilli/tilli-appstore-missions.png" width="1290" height="2796" alt="Visuel App Store : récapitulatif de missions avec montants de démonstration."></a>
+          <a href="assets/tilli/tilli-appstore-missions-1290.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-appstore-missions-300.avif 300w, assets/tilli/tilli-appstore-missions-600.avif 600w, assets/tilli/tilli-appstore-missions-1290.avif 1290w" sizes="(max-width: 700px) 300px, 280px">
+            <img src="assets/tilli/tilli-appstore-missions-300.webp" srcset="assets/tilli/tilli-appstore-missions-300.webp 300w, assets/tilli/tilli-appstore-missions-600.webp 600w, assets/tilli/tilli-appstore-missions-1290.webp 1290w" sizes="(max-width: 700px) 300px, 280px" width="1290" height="2796" loading="lazy" alt="Visuel App Store : récapitulatif de missions avec montants de démonstration.">
+          </picture></a>
           <figcaption>Consulter le récapitulatif et sa rémunération.</figcaption>
         </figure>
       </div>
@@ -180,7 +209,10 @@
       <details>
         <summary>Visuel complémentaire : les flux de paiement</summary>
         <figure>
-          <a href="assets/tilli/tilli-flux-paiements.png"><img class="payments" loading="lazy" src="assets/tilli/tilli-flux-paiements.png" alt="Flux financiers entre clients, marques, artisans et Tilli via Mangopay."></a>
+          <a href="assets/tilli/tilli-flux-paiements-1981.webp"><picture>
+            <source type="image/avif" srcset="assets/tilli/tilli-flux-paiements-1000.avif 1000w, assets/tilli/tilli-flux-paiements-1981.avif 1981w" sizes="(max-width: 1440px) 90vw, 1264px">
+            <img class="payments" src="assets/tilli/tilli-flux-paiements-1000.webp" srcset="assets/tilli/tilli-flux-paiements-1000.webp 1000w, assets/tilli/tilli-flux-paiements-1981.webp 1981w" sizes="(max-width: 1440px) 90vw, 1264px" width="1981" height="877" loading="lazy" alt="Flux financiers entre clients, marques, artisans et Tilli via Mangopay.">
+          </picture></a>
           <figcaption>Image originale du deck de passation, diapositive 26.</figcaption>
         </figure>
       </details>
@@ -248,7 +280,7 @@
           <a class="button light" href="https://www.linkedin.com/in/benjmichel/" target="_blank" rel="noopener noreferrer">Échangeons sur LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
         <div class="company-note">
-          <img src="assets/alphard-logo.png" width="300" height="300" alt="Logo Alphard" loading="lazy">
+          <img src="assets/alphard-logo-168.png" width="168" height="168" alt="Logo Alphard" loading="lazy">
           <p>Benjamin Michel, développeur indépendant.<br>J’exerce mon activité au sein d’<strong>Alphard</strong>, ma SASU.</p>
         </div>
       </div>

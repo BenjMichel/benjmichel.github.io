@@ -1,0 +1,141 @@
+<!doctype html>
+<!--
+  Gabarit 1200×630 de l'image de partage (og:image). Rendu, depuis la racine du dépôt :
+    python3 -m http.server 4176 --directory site
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars \
+      --window-size=1200,630 --screenshot=/tmp/og.png http://localhost:4176/sources/og-card.html
+    magick /tmp/og.png -strip -quality 85 site/dist/assets/og-image.jpg
+-->
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @font-face {
+      font-family: 'DM Sans';
+      font-weight: 400 700;
+      src: url('../dist/assets/fonts/dm-sans-latin.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Instrument Serif';
+      font-style: italic;
+      src: url('../dist/assets/fonts/instrument-serif-italic-latin.woff2') format('woff2');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      position: relative;
+      background: #050d20;
+      color: #f4f2ea;
+      font-family: 'DM Sans', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('../dist/assets/hero-stars.webp') left top / 100% auto no-repeat;
+      opacity: .45;
+    }
+
+    .card {
+      position: relative;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      align-items: center;
+      gap: 56px;
+      padding: 64px 80px;
+    }
+
+    .wordmark {
+      font-size: 24px;
+      font-weight: 550;
+      letter-spacing: -.045em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .wordmark span {
+      color: #acc5ff;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    h1 {
+      margin: 40px 0 32px;
+      font-size: 72px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -.06em;
+    }
+
+    h1 em {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.035em;
+      color: #acc5ff;
+    }
+
+    p {
+      margin: 0;
+      font-size: 22px;
+      color: #a9b5c8;
+    }
+
+    .portrait {
+      position: relative;
+      width: 330px;
+      height: 330px;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 44%;
+      border-radius: 50%;
+      border: 1px solid #acc5ff66;
+    }
+
+    .portrait::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      border: 1px solid #acc5ff55;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      transform: rotate(-18deg);
+    }
+
+    .url {
+      position: absolute;
+      left: 80px;
+      bottom: 40px;
+      font-size: 18px;
+      color: #acc5ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <div class="wordmark"><span>✦</span> Benjamin Michel</div>
+      <h1>Du premier commit<br>au produit <em>qui grandit.</em></h1>
+      <p>Développeur fullstack freelance · React, React Native, Node.js<br>Ex-CTO &amp; cofondateur de Tilli · Strasbourg</p>
+    </div>
+    <div class="portrait"><img src="../dist/assets/portrait-700.jpg" alt=""></div>
+  </div>
+  <span class="url">benjmichel.github.io</span>
+</body>
+</html>
