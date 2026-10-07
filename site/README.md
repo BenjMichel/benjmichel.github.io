@@ -1,42 +1,63 @@
-# Portfolio de Benjamin Michel
+# Site
 
-Site statique en français, sans dépendance de compilation. Les fichiers à modifier sont `dist/index.html` (contenu) et `dist/styles.css` (mise en page). Les polices DM Sans et Instrument Serif sont chargées depuis Google Fonts, avec des polices système de secours.
+Site statique en français. Tout ce qui est publié se trouve dans `dist/` : `index.html` pour le contenu, `styles.css` pour la mise en page, `assets/` pour les images.
 
 ## Aperçu local
 
-Depuis ce dossier : `python3 -m http.server 4173 --directory dist`, puis ouvrir http://localhost:4173.
+Depuis ce dossier :
 
-## Contenu et sources
+```sh
+python3 -m http.server 4173 --directory dist
+```
 
-Consultés le 23 septembre 2026 :
+Puis ouvrir http://localhost:4173.
 
-- https://fr.linkedin.com/in/benjmichel/en : développeur fullstack freelance, React, React Native, Node.js, ex-CTO et cofondateur, Strasbourg, formation Ensimag, recommandation de Laura Petit.
-- https://fr.linkedin.com/in/benjmichel : présentation mentionnant neuf ans à construire la technologie de Tilli et une équipe de huit personnes.
-- https://github.com/BenjMichel : projets épinglés Shopping List, Survival A-Frame et Gatsby Plugin Nullish Coalescing Operator.
-- https://github.com/BenjMichel/survival-aframe : jeu VR en React et A-Frame.
+## Styles
 
-L’accès direct à LinkedIn était limité ; des versions publiques indexées du profil ont été consultées. Leurs intitulés d’entreprise actuels diffèrent, aussi aucune mission actuelle ni date de disponibilité n’a été ajoutée. La localisation LinkedIn plus récente (Strasbourg) a été retenue plutôt que celle de GitHub (Paris). Les projets GitHub sont présentés comme des explorations personnelles, sans résultats commerciaux inventés. Le contact pointe vers LinkedIn ; aucune adresse e-mail n’a été devinée.
+`styles.css` suit l'ordre de la page : base, header, hero, expertise, parcours, cas Tilli, projets, recommandation, contact, footer. Les adaptations responsive sont regroupées à la fin par point de rupture (1500, 1000 et 700 px), suivies de `prefers-reduced-motion`.
 
-Le site public est hébergé sur GitHub Pages : https://benjmichel.github.io/. Aucune mesure d’audience, aucun formulaire et aucun stockage de données personnelles ne sont ajoutés.
+Les couleurs sont des variables déclarées dans `:root`. Les polices DM Sans (variable) et Instrument Serif sont hébergées dans `dist/assets/fonts/` (sous-ensemble latin en `woff2`, licence OFL) : le site n'appelle aucun service tiers. DM Sans est préchargée depuis `index.html`.
 
 ## Identité Alphard
 
-Benjamin Michel reste la marque principale. Alphard est présentée comme sa SASU dans le contact et le pied de page. Palette : bleu nuit `#050d20`, ivoire `#f4f2ea`, bleu stellaire `#acc5ff`, ardoise `#a9b5c8`. Illustration décorative (pas une carte astronomique exacte) enregistrée dans `dist/assets/alphard-hydra.png`, créée avec l’outil intégré imagegen.
+Je publie sous mon nom ; Alphard, ma SASU, apparaît dans le contact et le pied de page.
 
-Brief de génération : hydre céleste à trois têtes, gravure fine cuivre et or pâle sur fond bleu nuit, étoiles reliées par de fins segments, une étoile centrale lumineuse, marges généreuses, sans texte ni interface. Composition inspirée d’un atlas céleste pour le portfolio de Benjamin Michel.
+- Palette : bleu nuit `#050d20`, ivoire `#f4f2ea`, bleu stellaire `#acc5ff`, ardoise `#a9b5c8`.
+- La partie étoilée gauche de la bannière Alphard (`assets/hero-stars`) habille le fond du hero.
+- L'hydre céleste (`assets/hydra-600`) est une illustration décorative en filigrane de la section Parcours, pas une carte astronomique exacte.
+- Le portrait est cadré en cercle par CSS.
 
-Le portrait et le logo fournis par Benjamin sont copiés sans retouche dans `dist/assets/benjamin-michel.jpg` et `dist/assets/alphard-logo.png`. Le portrait est cadré en cercle par CSS. La partie étoilée gauche de la bannière fournie (`dist/assets/alphard-banner.png`) habille le fond du hero ; son texte n’est pas affiché. L’hydre demeure en filigrane du parcours. Aucune légende visible n’explicite le thème.
+Deux filtres SVG déclarés en tête de `index.html` adaptent leur fond au rendu : `logo-alpha` rend transparent le fond clair du logo, `hydra-alpha` rend transparent le fond sombre de l'hydre et la teinte en bleu stellaire.
 
-### Intégration des fonds
+## Cas Tilli
 
-Les images originales sont préservées. Les filtres SVG `logo-alpha` et `hydra-alpha` définis dans la page convertissent leurs fonds respectivement clair et sombre en transparence au rendu ; la couleur du logo reste bleu marine et l’hydre est teintée bleu stellaire. Les essais imagegen ont produit des fonds à damier opaques et ne sont pas utilisés dans le site.
+La section « Expérience professionnelle » présente Tilli, que j'ai cofondée et dont j'ai été CTO. Ses visuels sont dans `assets/tilli/`, chacun lié à sa plus grande variante :
 
-## Expérience professionnelle chez Tilli
+- le schéma d'architecture, synthèse du deck de passation de novembre 2025 ;
+- les maquettes web et la capture du site partenaires ;
+- trois visuels App Store de l'application artisans, données personnelles masquées ;
+- le schéma des flux de paiement, dans un volet repliable.
 
-La rubrique « Expérience professionnelle », distincte des projets open source, reprend le contenu et les huit visuels fournis dans `portfolio-tilli-contenu/apercu.html`. Les fichiers sont conservés dans `dist/assets/tilli/`, avec des liens vers leur version en grand. L’architecture représente l’écosystème historique de novembre 2025 ; les maquettes web et la capture locale sont identifiées dans leurs légendes. Les trois visuels App Store présentent le profil, l’agenda et le récapitulatif des missions, avec les données personnelles masquées. Le schéma des paiements est accessible dans un volet repliable sur fond blanc.
+## Images
 
-## Publication GitHub Pages
+Les originaux sont versionnés dans `sources/` et ne sont pas publiés. `scripts/optimize-images.sh` (ImageMagick 7 avec AVIF et WebP) en produit les variantes publiées dans `dist/assets/` :
 
-Les sources sont conservées dans le dépôt public `BenjMichel/benjmichel.github.io`. Le workflow `.github/workflows/pages.yml` publie directement le contenu de `site/dist/` sur https://benjmichel.github.io/ après chaque push sur `main`. Aucune compilation n’est nécessaire.
+```sh
+scripts/optimize-images.sh   # depuis la racine du dépôt
+```
 
-Pour une mise à jour, modifier les fichiers de `site/dist/`, puis committer et pousser sur `main`. Le déploiement est visible dans l’onglet Actions du dépôt et peut aussi être relancé manuellement. L’ancien dépôt de publication est archivé sous `BenjMichel/tilli-site-old`. La configuration `.openai/` correspond à un ancien essai d’hébergement et n’est ni versionnée ni publiée.
+- chaque image existe en AVIF et en WebP, à sa largeur d'affichage et en double densité ; la page les sert via `<picture>`, `srcset` et `image-set()` ;
+- le portrait garde un JPEG de repli, le logo reste un PNG sans perte à cause du filtre `logo-alpha` ;
+- les métadonnées (EXIF) sont supprimées.
+
+Pour changer une image : remplacer l'original dans `sources/`, relancer le script, commiter le résultat. Une nouvelle image s'ajoute dans le script.
+
+## Image de partage
+
+`dist/assets/og-image.jpg` (1200×630) est l'aperçu affiché quand le lien est partagé sur LinkedIn, Slack ou ailleurs. Elle est rendue depuis `sources/og-card.html` avec Chrome en mode headless ; la commande est en tête de ce fichier.
+
+## Publication
+
+Le site est publié sur GitHub Pages depuis le dépôt `BenjMichel/benjmichel.github.io`. Le workflow `.github/workflows/pages.yml` publie le contenu de `site/dist/` sur https://benjmichel.github.io/ à chaque push sur `main` ; il peut aussi être relancé à la main depuis l'onglet Actions.
+
+Le site ne contient ni mesure d'audience, ni formulaire, ni stockage de données personnelles.

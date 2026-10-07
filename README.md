@@ -1,10 +1,10 @@
 # Portfolio de Benjamin Michel
 
-Portfolio de Benjamin Michel, développeur fullstack freelance : expertise, parcours, projets open source et contact.
-
-Site statique en HTML et CSS, sans dépendance à installer ni étape de compilation.
+Le code de mon portfolio de développeur fullstack freelance : expertise, parcours, cas Tilli et projets.
 
 **[Voir le site](https://benjmichel.github.io/)**
+
+J'ai volontairement choisi du HTML et du CSS statiques : aucune dépendance à installer, aucune étape de compilation, et un site publié tel qu'il est versionné.
 
 ## Lancer en local
 
@@ -16,10 +16,11 @@ python3 -m http.server 4173 --directory site/dist
 
 Ouvrir ensuite [localhost:4173](http://localhost:4173).
 
-## Modifier le site
+## Structure
 
 - `site/dist/index.html` : contenu de la page.
-- `site/dist/styles.css` : styles et mise en page.
-- `site/dist/assets/` : images et identité visuelle Alphard.
+- `site/dist/styles.css` : styles, organisés dans l'ordre des sections de la page.
+- `site/dist/assets/` : images publiées (identité Alphard, portrait, visuels Tilli).
+- `site/sources/` : originaux des images, non publiés ; `scripts/optimize-images.sh` en génère les variantes AVIF et WebP.
 
-Les détails sur les sources et la publication GitHub Pages sont dans [site/README.md](site/README.md).
+L'identité visuelle, les choix techniques et la publication sont détaillés dans [site/README.md](site/README.md).
