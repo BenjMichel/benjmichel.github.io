@@ -54,7 +54,7 @@ Pour changer une image : remplacer l'original dans `sources/`, relancer le scrip
 
 ## Image de partage
 
-`dist/assets/og-image.jpg` (1200×630) est l'aperçu affiché quand le lien est partagé sur LinkedIn, Slack ou ailleurs. Elle est rendue depuis `sources/og-card.html` avec Chrome en mode headless ; la commande est en tête de ce fichier.
+`dist/assets/og-image-2400.jpg` (2400×1260, double densité du format 1200×630) est l'aperçu affiché quand le lien est partagé sur LinkedIn, Slack ou ailleurs. Elle est rendue depuis `sources/og-card.html` avec Chrome en mode headless ; la commande est en tête de ce fichier. LinkedIn garde l'image en cache : après une modification, changer le nom du fichier pour forcer une nouvelle récupération, puis relancer le Post Inspector.
 
 ## Publication
 
