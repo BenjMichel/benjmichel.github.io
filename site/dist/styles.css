@@ -371,6 +371,33 @@ h1 .serif {
   text-shadow: 0 0 18px #6f9bff;
 }
 
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .portrait {
+    transition: transform 450ms cubic-bezier(.2, .7, .2, 1), box-shadow 450ms ease;
+  }
+
+  .portrait-orbit::before {
+    transition: transform 650ms cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .orbit-star {
+    transition: transform 650ms cubic-bezier(.2, .7, .2, 1);
+  }
+
+  .portrait-orbit:hover .portrait {
+    transform: scale(1.035);
+    box-shadow: 0 0 32px #acc5ff24;
+  }
+
+  .portrait-orbit:hover::before {
+    transform: rotate(24deg);
+  }
+
+  .portrait-orbit:hover .orbit-star {
+    transform: rotate(90deg) scale(1.15);
+  }
+}
+
 .hero-bottom {
   display: flex;
   justify-content: space-between;
